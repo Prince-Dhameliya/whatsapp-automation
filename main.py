@@ -3,7 +3,7 @@ import pyautogui
 import time
 from PIL import Image
 
-img = Image.open("mk.png")
+
 
 dataset ={
    "7045525200" : "hello!!",
