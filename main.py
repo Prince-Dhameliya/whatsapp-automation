@@ -1,27 +1,47 @@
 import webbrowser
 import pyautogui
 import time
+from PIL import Image
 
-person_name ='Prince' #input('enter a name whome you wan to sent a messages : ')
-type_msg = 'efejefewf eeeeeeeeeeeeeeeeeeee efffffffffffffffffffffv                   d ddddddddddddddddddddee         feefefef'#input('enter msg whatever you want tom send : ')
+img = Image.open("mk.png")
 
-webbrowser.open('https://web.whatsapp.com/')
-time.sleep(10)
-#print(pyautogui.position())
-
-pyautogui.click(286,259)
-pyautogui.typewrite(person_name)
-
-time.sleep(5)
-pyautogui.click(291,427) #163 259
-
-time.sleep(3)
-pyautogui.click(862,969) 
-pyautogui.typewrite(type_msg)
+dataset ={
+   "7045525200" : "hello!!",
+  "79892663226" : "good morning!!"
+}
 
 
-time.sleep(2)
-pyautogui.click(1790,970)
+for num,msg in dataset.items():
+  
+
+    b="https://wa.me/91"+str(num)
+    webbrowser.open(b)
+    # time.sleep(10)
+
+
+
+
+    #for continue to chat
+    time.sleep(20)
+    pyautogui.click(952,445)
+
+    #for set use whatsapp web
+    time.sleep(2)
+    pyautogui.click(954,541)
+
+
+
+    #for type msg
+    time.sleep(10)
+    pyautogui.click(862,969) 
+    pyautogui.typewrite(msg)
+
+    #for send msg
+    time.sleep(2)
+    pyautogui.click(1790,970)
+
+    time.sleep(20)
+
 
 
 
